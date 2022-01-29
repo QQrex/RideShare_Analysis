@@ -63,15 +63,19 @@ Our next step would be to group the dates by weeks. We could use .resample, howe
 
 Now that our index data type is 'DatetimeIndex' we will use .resample to group the indexes by week and also sum their values.
 
-<<<<<<< HEAD
-![resample]()
-=======
-![resample](https://github.com/QQrex/RideShare_Analysis/blob/0c31bf47bb7071cd038ec3fa1ae604b0ff48578c/Resources/resample.PNG)
+![resample](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/resample.PNG)
 
-Finally, we can plot the resampled pivot table using:
+Finally, we can plot the resampled pivot table using object-oriented interface method.
 
-![plot](https://github.com/QQrex/RideShare_Analysis/blob/0c31bf47bb7071cd038ec3fa1ae604b0ff48578c/Resources/plot.PNG)
->>>>>>> 8e927980b5e66921d5a9ebce91c6630c8e6c56e3
+![plot](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/oo%20plot.PNG)
 
+## Results
+
+![df](https://github.com/QQrex/RideShare_Analysis/blob/main/Analysis/Summary%20DF.PNG)
+>PyBer ride-share data summary
+
+![cfig](https://github.com/QQrex/RideShare_Analysis/blob/main/Analysis/ChallengeFig.png)
+>multiple-line chat
 
 ## Summary
+
