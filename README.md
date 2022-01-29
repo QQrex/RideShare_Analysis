@@ -63,6 +63,6 @@ Our next step would be to group the dates by weeks. We could use .resample, howe
 
 Now that our index data type is 'DatetimeIndex' we will use .resample to group the indexes by week and also sum their values.
 
-![resample](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/resample.PNG)
+![resample]()
 
 
