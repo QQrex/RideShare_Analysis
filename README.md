@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Create a multiple-line chart of total fares for eacy city type in the PyBer rideshare data.
+Create a summary of the PyBer data and a multiple-line chart of total fares for eacy city type in the PyBer rideshare data.
 
 ## Project Overview
 
@@ -15,7 +15,7 @@ Create a multiple-line chart of total fares for eacy city type in the PyBer ride
 
 To start our analysis of our data, we need to add our dependencies and path our csv files to read.
 
-![path](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/Load%20dep.PNG]
+![path](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/Load%20dep.PNG)
 
 Our next step would be to merge our two csv files into one DataFrame in our script to easily access all fields in one DataFrame. We will pd.merge to merge on the 'city' column.
 
@@ -51,7 +51,7 @@ Next, we need to reset the indices in order to use .pivot to create a pivot tabl
 
 ![resetindex](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/reset%20index.PNG)
 
-Now we can use .pivot to create a pivot table with dates as index, columns as types and values as fare. We would also like to narrow down on the range of dates we are looking at from 2019-01-01 to 2019-04-29.
+Now we can use .pivot to create a pivot table with dates as index values, columns as types and values as fare. We would also like to narrow down on the range of dates we are looking at from 2019-01-01 to 2019-04-29.
 
 ![pivot](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/pivot%20table.PNG)
 >Cell 1 - Create pivot table
@@ -79,3 +79,4 @@ Finally, we can plot the resampled pivot table using object-oriented interface m
 
 ## Summary
 
+In summary, we can see an increase of rider and driver fare prices from Rural > Suburban > Urban accross the board. The most signficant difference is when comparing drivers in rural cities and urban cities. On average a rural driver can make on average $55.49 and urban drivers only $16.57. Just from our data alone, we can only assume this is because there is a greate amount of riders than drivers in rural areas vs urban areas.
