@@ -79,4 +79,4 @@ Finally, we can plot the resampled pivot table using object-oriented interface m
 
 ## Summary
 
-In summary, we can see an increase of rider and driver fare prices from Rural > Suburban > Urban accross the board. The most signficant difference is when comparing drivers in rural cities and urban cities. On average a rural driver can make on average $55.49 and urban drivers only $16.57. Just from our data alone, we can only assume this is because there is a greate amount of riders than drivers in rural areas vs urban areas.
+In summary, we can see a large disparity in average fare prices for urban driver prices versus suburban and rural. This is in part due to a higher ratio of riders versus drivers. We can see this effect the average fare for riders as well, but instead higher prices for rural areas versus suburban and urban. Perhaps we should also consider looking at time of day PyBer receives higher rider count and add a surge charge during peak rider count to increase lower average driver fare in urban cities.
