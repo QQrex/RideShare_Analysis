@@ -2,11 +2,12 @@
 
 ## Purpose
 
-Create a summary of the PyBer data and a multiple-line chart of total fares for eacy city type in the PyBer rideshare data.
+Create a summary of the PyBer data and a multiple-line chart of total fares for each city type in the PyBer rideshare data.
 
 ## Project Overview
 
 -Create a ride-sharing summary DataFrame by city type
+
 -Create a multiple-line chart of total fares for each city type
 
 ## Analysis
@@ -21,29 +22,29 @@ Our next step would be to merge our two csv files into one DataFrame in our scri
 
 ![merge](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/merge%20data.PNG)
 
-Once we have one complete DataFrame, we will can count the total rides made per city type and total drivers per city type.
+Once we have one complete DataFrame, we will count the total rides made per city type and total drivers per city type.
 
 ![count](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/counts.PNG)
 >Cell 1 - Use .groupby on pyber_data_df to count all rider IDs by city type.
 >
 >Cell 2 - Use .groupby on city_data_df to sum all drivers by city type. We don't want to use the pyber_data_df because there are duplicate values of driver counts in pyber_data_df when we merged the two csv files. It is easier just to use the original city data csv file to find driver count by type.
 
-Now we will need to caculate the total fares by city type and also figure out avgerage ride per rider and per driver.
+Now we will need to calculate the total fares by city type andaverage ride per rider and per driver.
 
 ![fare](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/fares.PNG)
->Cell 1 - Similiar to how to we calculated driver count, we will use groupby to sum fares in pyber_data_df per city type.
+>Cell 1 - Similar to how we calculated driver count, we will use groupby to sum fares in pyber_data_df per city type.
 >
 >Cell 2 - Divide total fare by total rider count to find average fare per rider.
 >
 >Cell 2 - Divide total fare by total driver count to find average fare per driver.
 
-Finally, we can construct our pyber summary DataFrame.
+Finally, we can construct our Pyber summary DataFrame.
 
 ![Pybersumy](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/pyber%20summary%20df.PNG)
 
 **[Plot Line Chart]**
 
-To create a multiple-line chart we need to create a piviot table with date (in weeks) as x-axis, fares (sum by dates) as y-axis and our lines as city types. To do this we first need to extract the relevate data from the pyber_data_df. We can use .groupby again but this time we group both type and date together to sum fare per city type with dates. Our new Series will show type and date as indices with sum of fares
+To create a multiple-line chart we need to create a pivot table with date (in weeks) as x-axis, fares (sum by dates) as y-axis and our lines as city types. To do this we first need to extract the relevant data from the pyber_data_df. We can use .groupby again but this time we group both type and date together to sum fare per city type with dates. Our new Series will show type and date as indices with sum of fares
 
 ![indexsum](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/index%20sum.PNG)
 
@@ -57,7 +58,7 @@ Now we can use .pivot to create a pivot table with dates as index values, column
 >Cell 1 - Create pivot table
 >Cell 2 - Use .loc to only look at row values between 2019-01-01 to 2019-04-29
 
-Our next step would be to group the dates by weeks. We could use .resample, however we need to check if our data type for our date index is in 'DatetimeIndex' type. If our data type is not right, we will have to to use pd.to_datatime to change the data type to 'DatetimeIndex'.
+Our next step would be to group the dates by weeks. We could use .resample, however we need to check if our data type for our date index is in 'DatetimeIndex' type. If our data type is not right, we will have to use pd.to_datatime to change the data type to 'DatetimeIndex'.
 
 ![datetime](https://github.com/QQrex/RideShare_Analysis/blob/main/Resources/datetime.PNG)
 
